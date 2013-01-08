@@ -45,7 +45,7 @@ namespace Aditi.SignatureAuth
 
         public static Signature Parse(string text)
         {
-            if (text.Substring(0, 4) != "MAC ")
+            if (text.Length < 4 || text.Substring(0, 4) != "MAC ")
             {
                 throw new ArgumentException(@"Not a valid signature string. Text doesn't start with the string ""MAC "".");
             }
@@ -53,6 +53,10 @@ namespace Aditi.SignatureAuth
             var components = new NameValueCollection();
             foreach (var pair in text.Substring(4).Split(',').Select(kv => kv.Trim().Split(new char[] { '=' }, 2)))
             {
+                if (pair.Length != 2)
+                {
+                    throw new ArgumentException(@"Invalid Signature String.  Malformed '=' pairs");
+                }
                 components[pair[0].Trim()] = pair[1].Trim(' ', '"');
             }
 
