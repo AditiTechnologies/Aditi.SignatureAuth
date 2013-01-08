@@ -5,16 +5,18 @@
     <version>$version$</version>
     <authors>Aditi</authors>
     <owners>Aditi</owners>
-    <licenseUrl>https://github.com/AditiTechnologies/Aditi.SignatureAuth/blob/master/LICENSE.txt</licenseUrl>
+    <licenseUrl>https://raw.github.com/AditiTechnologies/Aditi.SignatureAuth/master/LICENSE.txt</licenseUrl>
     <projectUrl>https://github.com/AditiTechnologies/Aditi.SignatureAuth</projectUrl>
     <iconUrl>http://productservices.blob.core.windows.net/media/icon_aditi.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Package description</description>
-    <releaseNotes>Aditi.SignatureAuth provides an assembly for generating the authentication signature for Aditi Cloud Services (e.g. the Aditi Scheduler).</releaseNotes>
+    <description>Aditi.SignatureAuth provides an assembly for generating the authentication signature for Aditi Cloud Services (e.g. the Aditi Scheduler).</description>
+    <releaseNotes></releaseNotes>
     <copyright>Copyright 2013</copyright>
-    <tags>Tag1 Tag2</tags>
-    <dependencies>
-      <dependency id="SampleDependency" version="1.0" />
-    </dependencies>
+    <tags>aditi auth signature</tags>
   </metadata>
+  <files>
+    <file src="..\..\src\Aditi.SignatureAuth\bin\Aditi.SignatureAuth.dll" target="lib" />
+    <file src="..\..\src\Aditi.SignatureAuth\bin\Aditi.SignatureAuth.pdb" target="lib" />
+    <file src="..\..\tools\Install.ps1" target="tools" />
+  </files>
 </package>
