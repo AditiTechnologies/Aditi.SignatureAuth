@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Aditi.SignatureAuth</id>
+    <version>$version$</version>
+    <authors>Aditi</authors>
+    <owners>Aditi</owners>
+    <licenseUrl>https://github.com/AditiTechnologies/Aditi.SignatureAuth/blob/master/LICENSE.txt</licenseUrl>
+    <projectUrl>https://github.com/AditiTechnologies/Aditi.SignatureAuth</projectUrl>
+    <iconUrl>http://productservices.blob.core.windows.net/media/icon_aditi.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Package description</description>
+    <releaseNotes>Aditi.SignatureAuth provides an assembly for generating the authentication signature for Aditi Cloud Services (e.g. the Aditi Scheduler).</releaseNotes>
+    <copyright>Copyright 2013</copyright>
+    <tags>Tag1 Tag2</tags>
+    <dependencies>
+      <dependency id="SampleDependency" version="1.0" />
+    </dependencies>
+  </metadata>
+</package>
