@@ -7,7 +7,7 @@
     <owners>Aditi</owners>
     <licenseUrl>https://raw.github.com/AditiTechnologies/Aditi.SignatureAuth/master/LICENSE.txt</licenseUrl>
     <projectUrl>https://github.com/AditiTechnologies/Aditi.SignatureAuth</projectUrl>
-    <iconUrl>http://productservices.blob.core.windows.net/media/icon_aditi.png</iconUrl>
+    <iconUrl>https://raw.github.com/AditiTechnologies/Aditi.SignatureAuth/master/packaging/AditiLogo.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Aditi.SignatureAuth provides an assembly for generating the authentication signature for Aditi Cloud Services (e.g. the Aditi Scheduler).</description>
     <releaseNotes></releaseNotes>
@@ -18,5 +18,6 @@
     <file src="..\..\src\Aditi.SignatureAuth\bin\Aditi.SignatureAuth.dll" target="lib" />
     <file src="..\..\src\Aditi.SignatureAuth\bin\Aditi.SignatureAuth.pdb" target="lib" />
     <file src="..\..\tools\Install.ps1" target="tools" />
+    <file src="..\..\src\Aditi.SignatureAuth\*.cs" target="src" />
   </files>
 </package>
