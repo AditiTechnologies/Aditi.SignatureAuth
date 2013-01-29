@@ -36,7 +36,14 @@ namespace Aditi.SignatureAuth
                 return UnAuthorized(request, e.Message);
             }
 
-            signature.SecretKey = Convert.FromBase64String(KeyLookup(signature.Id));
+            var secretKey = KeyLookup(signature.Id);
+
+            if (String.IsNullOrWhiteSpace(secretKey))
+            {
+                return UnAuthorized(request, "Invalid TenantId");
+            }
+
+            signature.SecretKey = Convert.FromBase64String(secretKey);
             if (signature.Mac != signature.ComputeMac())
             {
                 return UnAuthorized(request, "Invalid MAC. Signatures don't match.");
