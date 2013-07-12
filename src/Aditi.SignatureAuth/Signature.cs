@@ -28,11 +28,19 @@ namespace Aditi.SignatureAuth
 
         public Signature(string id, byte[] secretKey) : this(id)
         {
+            if (secretKey == null )
+            {
+                throw new ArgumentNullException("secretKey");
+            }
             this.SecretKey = secretKey;
         }
 
         public Signature(string id)
         {
+            if (string.IsNullOrEmpty(id))
+            {
+                throw new ArgumentNullException("id");
+            }
             this.Id = id;
 
             this.Timestamp = DateTimeOffset.UtcNow;
