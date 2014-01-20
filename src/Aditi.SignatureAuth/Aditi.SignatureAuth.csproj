@@ -44,7 +44,16 @@
     <Compile Include="Signature.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="version.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Aditi.SignatureAuth.nuspec" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>if "x%25PublishToLocalNugetFeed%25"=="x1" powershell  -ExecutionPolicy Unrestricted -file "$(SolutionDir)\..\assets\NugetPublish.ps1" -slnPath $(SolutionDir) -projPath $(ProjectDir)</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
